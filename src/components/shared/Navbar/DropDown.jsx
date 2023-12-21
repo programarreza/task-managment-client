@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import useAuth from "../../../Hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
 
 const DropDown = () => {
-//   const { user, logOut } = useAuth();
+  const { user, logOut } = useAuth();
   const [isShow, setIsShow] = useState(false);
-  const user = true 
+  
 
   return (
     <>
@@ -30,14 +30,14 @@ const DropDown = () => {
           <li>
             <a className="justify-between">{user?.displayName}</a>
           </li>
-
-          <li>
-            {/* <p onClick={logOut}>logout</p> */}
-          </li>
           <li>
             <Link to="dashboard">
             <p>Dashboard</p>
             </Link>
+          </li>
+
+          <li>
+            <p onClick={logOut}>logout</p>
           </li>
         </ul> : ""}
     </>
