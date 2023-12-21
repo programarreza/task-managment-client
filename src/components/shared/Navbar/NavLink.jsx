@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 
 const NavbarLink = () => {
   return (
-    <div className="space-x-5">
+    <div className="space-x-4 text-lg font-semibold">
       <NavLink
         to="/"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "underline" : ""
+          isPending ? "pending" : isActive ? "underline text-[#006ce1]" : ""
         }
       >
         Home
@@ -14,7 +14,7 @@ const NavbarLink = () => {
       <NavLink
         to="/login"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "underline" : ""
+          isPending ? "pending" : isActive ? "underline text-[#006ce1]" : ""
         }
       >
         Login 
@@ -22,7 +22,7 @@ const NavbarLink = () => {
       <NavLink
         to="/register"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "underline" : ""
+          isPending ? "pending" : isActive ? "underline text-[#006ce1]" : ""
         }
       >
         Register 
