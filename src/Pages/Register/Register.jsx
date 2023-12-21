@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { imageUpload } from "../../Utils/Utils";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import useAxiosLocal from "../../hooks/useAxiosLocal";
 import toast from "react-hot-toast";
@@ -9,6 +9,7 @@ import SocialLogin from "../../components/SocialLogin/SocialLogin";
 const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
   const axiosLocal = useAxiosLocal();
+  const navigate = useNavigate()
 
   const {
     register,
@@ -43,7 +44,7 @@ const Register = () => {
             if (res.data.insertedId) {
               toast.success("Registration Successful");
               reset();
-              //   navigate("/");
+                navigate("/dashboard");
             }
           });
         })
