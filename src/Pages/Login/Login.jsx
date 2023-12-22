@@ -107,7 +107,7 @@ const Login = () => {
                 <div className="form-control mt-2">
                   <button
                     type="submit"
-                    className="btn  bg-[#61adff] hover:bg-[#006ce1] text-white "
+                    className="btn  bg-[#6198ff] hover:bg-[#006ce1] text-white "
                   >
                     Login Now
                   </button>

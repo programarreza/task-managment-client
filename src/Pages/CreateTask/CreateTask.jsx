@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const CreateTask = () => {
   const axiosLocal = useAxiosLocal();
   const { user } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const {
     register,
@@ -29,7 +29,7 @@ const CreateTask = () => {
       status: "todo",
       priority: data.priority,
     };
-	console.log(userInfo);
+    console.log(userInfo);
 
     axiosLocal.post("/tasks", userInfo).then((res) => {
       if (res.data.insertedId) {
@@ -55,9 +55,7 @@ const CreateTask = () => {
             </div>
 
             {/* form area */}
-            <div
-              className="card w-1/2  flex-shrink-0 shadow-md mt-8"
-            >
+            <div className="card w-1/2  flex-shrink-0 shadow-md mt-8">
               <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                 <h2 className="text-center text-2xl font-bold">Create Task</h2>
                 <div className="form-control">
@@ -134,6 +132,9 @@ const CreateTask = () => {
                     <option value="moderate">Moderate</option>
                     <option value="high">High</option>
                   </select>
+                  {errors.priority && (
+                    <span className="text-[#006ce1]">Priority Is Required</span>
+                  )}
                 </div>
 
                 <div className="form-control mt-2">

@@ -21,7 +21,7 @@ const SocialLogin = () => {
       
       
       toast.success("Login Successfully");
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       toast.error(error?.message);
       console.log(error);
