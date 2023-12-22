@@ -3,6 +3,7 @@ import { axiosLocal } from "../../hooks/useAxiosLocal";
 import toast from "react-hot-toast";
 import { MdFolderDelete } from "react-icons/md";
 import { BiMessageAltEdit } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Task = ({ task, tasks, setTasks }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
@@ -51,9 +52,12 @@ const Task = ({ task, tasks, setTasks }) => {
           <button onClick={() => handleDelete(task?._id)}>
             <MdFolderDelete size={25} />
           </button>
-          <button>
-            <BiMessageAltEdit size={25} />
-          </button>
+
+          <Link to={`/task_update/${task?._id}`}>
+            <button>
+              <BiMessageAltEdit size={25} />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import CreateTask from "../Pages/CreateTask/CreateTask";
+import TaskUpdate from "../Pages/TaskUpdate/TaskUpdate";
 
 const Router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const Router = createBrowserRouter([
         path: "create_task",
         element: <CreateTask />,
       },
+      {
+        path: "task_update/:id",
+        element: <TaskUpdate/>,
+        loader: ({params}) => fetch(`http://localhost:5000/tasks_update/${params.id}`)
+      }
     ],
   },
 ]);
