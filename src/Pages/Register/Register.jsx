@@ -78,7 +78,7 @@ const Register = () => {
                 onSubmit={handleSubmit(onSubmit)}
                 className="card-body w-[350px]"
               >
-                <h2 className="text-center text-3xl font-bold">Sign Up</h2>
+                <h2 className="text-center text-3xl font-bold mt-5">Sign Up</h2>
                 <div className="form-control">
                   <label className="label"></label>
                   <input

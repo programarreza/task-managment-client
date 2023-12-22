@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const NavbarLink = () => {
+  const { user } = useAuth();
+
   return (
     <div className="space-x-4 text-lg font-semibold">
       <NavLink
@@ -11,13 +14,13 @@ const NavbarLink = () => {
       >
         Home
       </NavLink>
-      <NavLink
+      {!user && <><NavLink
         to="/login"
         className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "underline text-[#006ce1]" : ""
         }
       >
-        Login 
+        Login
       </NavLink>
       <NavLink
         to="/register"
@@ -25,8 +28,8 @@ const NavbarLink = () => {
           isPending ? "pending" : isActive ? "underline text-[#006ce1]" : ""
         }
       >
-        Register 
-      </NavLink>
+        Register
+      </NavLink></>}
     </div>
   );
 };

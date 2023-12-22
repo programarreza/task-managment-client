@@ -45,6 +45,7 @@ const CreateTask = () => {
       <div className="w-full  flex bg-cover bg-center">
         <div className="hero">
           <div className="hero-content flex flex-col md:flex-row  rounded-xl justify-between">
+            
             {/* image area */}
             <div className="text-center hidden md:flex lg:text-left w-1/2">
               <img
@@ -55,8 +56,8 @@ const CreateTask = () => {
             </div>
 
             {/* form area */}
-            <div className="card w-1/2  flex-shrink-0 shadow-md mt-8">
-              <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            <div className="card w-[400px] md:w-1/2  flex-shrink-0 shadow-md mt-8 ">
+              <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
                 <h2 className="text-center text-2xl font-bold">Create Task</h2>
                 <div className="form-control">
                   <label className="label"></label>
