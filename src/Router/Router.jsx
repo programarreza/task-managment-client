@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
+import CreateTask from "../Pages/CreateTask/CreateTask";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import Dashboard from "../Pages/Dashboard/Dashboard";
-import CreateTask from "../Pages/CreateTask/CreateTask";
 import TaskUpdate from "../Pages/TaskUpdate/TaskUpdate";
 
 const Router = createBrowserRouter([

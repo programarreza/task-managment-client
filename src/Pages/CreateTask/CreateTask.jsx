@@ -24,7 +24,6 @@ const CreateTask = () => {
       title: data.title,
       description: data.description,
       email: user?.email,
-      startDate: data.startDate,
       endDate: data.endDate,
       status: "todo",
       priority: data.priority,
@@ -83,22 +82,6 @@ const CreateTask = () => {
                   {errors.description && (
                     <span className="text-[#006ce1]">
                       Description is required
-                    </span>
-                  )}
-                </div>
-
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Start Date </span>
-                  </label>
-                  <input
-                    className="py-3 rounded-lg px-1 border"
-                    type="date"
-                    {...register("startDate", { required: true })}
-                  />
-                  {errors.startDate && (
-                    <span className="text-[#006ce1]">
-                      Start Date Is Required
                     </span>
                   )}
                 </div>
