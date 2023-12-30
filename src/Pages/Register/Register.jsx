@@ -66,7 +66,7 @@ const Register = () => {
             >
               <img
                 className="w-full  h-[80vh]"
-                src="https://i.postimg.cc/FHStM2cQ/login-img02.png"
+                src="https://i.postimg.cc/DzMMjLYy/login-img02-removebg-preview.png"
                 alt=""
               />
             </div>
