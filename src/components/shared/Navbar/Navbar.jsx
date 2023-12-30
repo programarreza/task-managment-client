@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import DropDown from "./DropDown";
 import NavbarLink from "./NavLink";
-
-
+import Theme from "./Theme";
 
 const Navbar = () => {
   return (
@@ -31,15 +31,18 @@ const Navbar = () => {
             <NavbarLink />
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Task Management</a>
+        <Link to="/">
+          <a className="btn btn-ghost text-xl">Task Management</a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <NavbarLink/>
+          <NavbarLink />
         </ul>
       </div>
       <div className="navbar-end">
-      <DropDown/>
+        <DropDown />
+        <Theme />
       </div>
     </div>
   );

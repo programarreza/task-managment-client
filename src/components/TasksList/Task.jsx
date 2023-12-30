@@ -42,7 +42,7 @@ const Task = ({ task, tasks, setTasks }) => {
     >
       <div className="flex justify-between">
         <div className="font-medium text-gray-500">
-          <p className="text-2xl font-semibold text-black">{task.title}</p>
+          <p className="text-2xl font-semibold mb-2">{task.title}</p>
           <p className="text-sm">{task.description}</p>
           <p className="text-sm">{task.endDate}</p>
           <p className="text-sm shadow-lg w-fit ">{task.priority}</p>

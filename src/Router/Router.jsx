@@ -35,7 +35,7 @@ const Router = createBrowserRouter([
       {
         path: "task_update/:id",
         element: <TaskUpdate/>,
-        loader: ({params}) => fetch(`http://localhost:5000/tasks_update/${params.id}`)
+        loader: ({params}) => fetch(`https://task-management-server-rho-nine.vercel.app/tasks_update/${params.id}`)
       }
     ],
   },
